@@ -1,0 +1,17 @@
+<br><br><br>
+
+
+<div>
+    {{ home }}
+</div>
+
+<div class="movies-wrapper">
+<div class="movies-container" ng-repeat="movie in movieList |filter:{status:'true'} ">
+        <img class="movie-poster" ng-src={{movie.moviPoster}} />
+        <span class="movie-title">Title : {{movie.moviTitle}}</span>
+        <span class="movie-title">Director : {{movie.moviDirector}}</span>
+        <!-- <button ng-click="bookMovie(movie)" class="button-color book btn btn-primary ">Book</button> -->
+        <a ng-click="bookMovie(movie.moviTitle)"  href="#/bookingshow" class="button-color book btn btn-primary" role="button">Book</a>
+    </div>
+      <a ng-click="bookMovie(movie.moviTitle)"  href="#/bookingshow" class="button-color book btn btn-primary" role="button">Book</a>
+</div>

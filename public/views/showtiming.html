@@ -1,0 +1,58 @@
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<br><br><br>
+  <div>
+      <center>
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th>Enter the Show Timing:</th>
+                      <th>show hours <select ng-model="showtime.showHours">
+                      <option value="01"> 1 </option>
+                      <option value="02"> 2 </option>
+                      <option value="03"> 3 </option>
+                      <option value="04"> 4 </option>
+                      <option value="05"> 5 </option>
+                      <option value="06"> 6 </option>
+                      <option value="07"> 7 </option>
+                      <option value="08"> 8 </option>
+                      <option value="09"> 9 </option>
+                      <option value="10"> 10 </option>
+                      <option value="11"> 11 </option>
+                      <option value="12"> 12 </option>
+                      </select>
+                        </th>
+                        <th>show Minutes <select ng-model="showtime.showMinutes">
+                        <option value="00"> 00</option>
+                        <option value="15"> 15</option>
+                        <option value="30"> 30</option>
+                        <option value="45"> 45</option>
+                        </select>
+                          </th>
+                          <th>am/pm <select ng-model="showtime.showPeriod">
+                          <option value"am"> am</option>
+                          <option value="pm"> pm</option>
+                          </select>
+                        </th>
+                        <th><button ng-click="addShowtiming(showtime)" class="btn btn-primary">Add </button></th>
+
+                        <th><button ng-click="updateShowtiming(showtime)" class="btn btn-primary">Update</button></th>
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat=" showtime in showtimingList">
+    <td>{{showtime.showHours}}</td>
+    <td>{{showtime.showMinutes}}</td>
+    <td>{{showtime.showPeriod}}</td>
+
+
+    <td><button ng-click="removeShowtiming(showtime)" class="btn btn-danger">Remove</button></td>
+    <td><button ng-click="editShowtiming(showtime)" class="btn btn-primary">Edit</button></td>
+</tr>
+</tbody>
+          </table>
+      </center>
+    </div>
